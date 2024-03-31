@@ -1,0 +1,150 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+  background-color: white;
+}
+.header .name a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #f05f40;
+}
+.header .name a:hover {
+  color: #ee411a;
+}
+.header .name a:active, .header .name a:focus {
+  color: #ee411a;
+}
+@media only screen and (min-width: 991px) {
+  .header {
+    background-color: transparent;
+  }
+  .header .name a {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .header .name a:hover {
+    color: #fff;
+  }
+  .header .mobileMenuItems svg {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+.header .menuItems {
+  list-style-type: none;
+  display: none;
+  align-items: center;
+  gap: 0 15px;
+}
+@media only screen and (min-width: 991px) {
+  .header .menuItems {
+    display: flex;
+  }
+}
+.header .menuItems .menuItem a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: large;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header .menuItems .menuItem a:hover {
+  color: #fff;
+}
+.header .menuItems .menuItem a:active, .header .menuItems .menuItem a:focus {
+  color: #fff;
+}
+.header .menuItems .active a {
+  color: #fff !important;
+}
+.header .mobileMenuItems {
+  display: block;
+}
+@media only screen and (min-width: 991px) {
+  .header .mobileMenuItems {
+    display: none;
+  }
+}
+.header .mobileMenuItems svg {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+.header.wBg {
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+.header.wBg .name a {
+  color: #f05f40;
+}
+.header.wBg .name a:hover {
+  color: #ee411a;
+}
+.header.wBg .menuItems .menuItem a {
+  font-weight: 800;
+  color: #212529;
+}
+.header.wBg .menuItems .menuItem a:hover {
+  color: #f05f40;
+}
+.header.wBg .menuItems .menuItem a:active, .header.wBg .menuItems .menuItem a:focus {
+  color: #f05f40;
+}
+.header.wBg .menuItems .active a {
+  color: #f05f40 !important;
+}
+.header.mobileView {
+  background: white;
+}
+.header.mobileView .menuItems {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: white;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+  animation: mobileMenu 0.3s ease forwards;
+}
+.header.mobileView .menuItems .menuItem {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 15px 20px;
+}
+.header.mobileView .menuItems .menuItem a {
+  color: black;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.header.mobileView .menuItems .menuItem a:hover {
+  color: #ee411a;
+}
+.header.mobileView .menuItems .menuItem a:active, .header.mobileView .menuItems .menuItem a:focus {
+  color: #ee411a;
+}
+.header.mobileView .menuItems .active a {
+  color: #ee411a !important;
+}
+.header.mobileView .mobileMenuItems svg {
+  color: black;
+}
+
+@keyframes mobileMenu {
+  0% {
+    transform: translateY(-130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=styles.css.map */

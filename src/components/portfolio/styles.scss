@@ -1,0 +1,55 @@
+@import '../../colors';
+@import '../../mixins';
+.Portfolio{
+    height: 750px;
+    position: relative;
+    color: $color-text-2;
+    background-color:$color-text-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include md{
+        height: 900px;
+    }
+    .container{
+        max-width:90% ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin: 20px 0;
+            text-transform: uppercase;
+            @include md{
+                font-size: 3rem;
+            }
+            @include b_md_lg {
+                font-size:4rem;
+            }
+
+            }
+         p{
+                font-size: 1rem;
+                letter-spacing: 3px;
+                margin-top: 10px;
+                @include b_md_lg {
+                    font-size: 1.2rem;
+                }
+                @include md{
+                    font-size: 1.3rem;
+                }
+                
+            }
+    }
+    .projets{
+        text-align: center;
+        margin: 20px auto;
+        max-width: 90% ;
+       
+    }
+    
+}

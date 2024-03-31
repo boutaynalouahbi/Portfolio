@@ -1,0 +1,88 @@
+.About {
+  height: 600px;
+  background-color: rgba(240, 96, 64, 0.5607843137);
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .About {
+    height: 900px;
+  }
+}
+.About .container {
+  max-width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .About .container {
+    max-width: 70%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .About .container {
+    max-width: 60%;
+  }
+}
+.About .container h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .About .container h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .About .container h1 {
+    font-size: 4rem;
+  }
+}
+.About .container p {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 991px) {
+  .About .container p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .About .container p {
+    font-size: 1.3rem;
+  }
+}
+.About .buttuns {
+  display: flex;
+  width: 100%;
+  max-width: 60%;
+}
+.About .buttuns a {
+  text-decoration: none;
+  background: #fff;
+  color: #000000;
+  margin: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  border-radius: 40px;
+  padding: 20px;
+  font-size: 0.8rem;
+}
+.About .buttuns a:hover {
+  background: #000000;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .About .buttuns a {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

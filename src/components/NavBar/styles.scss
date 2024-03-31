@@ -1,0 +1,176 @@
+@import '../../colors';
+@import '../../mixins';
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    background-color: white;
+    
+    .name {
+        a{
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color:$color-primary;
+            &:hover {
+                color:$color-secondary;
+            }
+            &:active,
+            &:focus {
+            color: $color-secondary;
+            }
+        }
+    }
+  
+    @include b_md_lg {
+        // background-color: $color-bg;
+        background-color: transparent;
+        .name {
+            a{
+                font-size: 2rem;
+                color:$color-text-3;
+                &:hover{
+                    color:$color-text-1;
+                }
+                
+            }
+        }
+        .mobileMenuItems {
+            svg {
+                color: $color-text-3;
+            }
+        }
+    }
+   
+    .menuItems{
+        list-style-type: none;
+        @include b_md_lg {
+            display: flex;
+        }
+        display: none;
+        align-items: center;
+        gap:0 15px;
+        .menuItem{
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: large;
+                letter-spacing: 1px;
+                color:$color-text-3;
+                &:hover{
+                    color:$color-text-1;
+                }
+                &:active,
+                &:focus {
+                color: $color-text-1;
+                }
+                
+            }
+        }
+        .active a{
+            color: $color-text-1 !important;
+        }
+    }
+    .mobileMenuItems {
+        display: block;
+        @include b_md_lg {
+            display: none;
+        }
+        svg {
+            font-size: 30px;
+            color: black;
+            cursor: pointer;
+
+        }
+    }
+    &.wBg{
+        background-color: white ;
+        border-bottom: 2px solid  black;
+        .name {
+            a{
+                color:$color-primary;
+                &:hover{
+                    color:$color-secondary;
+                }
+                
+            }
+        }
+        .menuItems{
+            .menuItem{
+                a{
+                    font-weight: 800;
+                    color:$color-bg;
+                    &:hover{
+                        color:$color-primary;
+                    }
+                    &:active ,
+                    &:focus{
+                        color:$color-primary;
+                    }
+                }
+            }
+            .active a{
+                color: $color-primary !important;
+            }
+        }
+    }
+    &.mobileView {
+        background: white;
+        .menuItems {
+            
+            display: flex;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background: white;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px 0;
+            animation: mobileMenu 0.3s ease forwards;
+            .menuItem{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 15px 20px;
+                a{
+                    color:black;
+                    font-weight: 900;
+                    font-size: 1.2rem;
+                    &:hover{
+                        color:$color-secondary;
+                    }
+                    &:active ,
+                    &:focus{
+                        color:$color-secondary;
+                    }
+                }
+            }
+            .active a{
+                color: $color-secondary !important;
+            }
+
+        }
+        .mobileMenuItems {
+            svg {
+                color: black;
+    
+            }
+        }
+    }
+}
+@keyframes mobileMenu {
+    0% {
+        transform: translateY(-130%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

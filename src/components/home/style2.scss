@@ -1,0 +1,167 @@
+@import '../../colors';
+@import '../../mixins';
+.Home{
+    color: $color-text-1;
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include md{
+        height: 900px;
+    }
+    // margin-top: 40px;
+    // margin-bottom:40px;
+    // @include md{
+    //     margin-bottom:80px;
+    // }
+    .container{
+        max-width:95% ;
+        margin: 40px auto ;
+        text-transform: uppercase;
+        text-align: center;
+        @include md{
+            max-width:90% ;
+        }
+        h1{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin: 20px 0;
+        @include md{
+            font-size: 3rem;
+        }
+        @include b_md_lg {
+            font-size:4rem;
+        }
+        @include xl {
+            font-size:5rem;
+        }
+        }
+        p{
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            @include b_md_lg {
+                font-size: 1.5rem;
+            }
+            @include md{
+                font-size: 1.2rem;
+            }
+            @include xl {
+                font-size:1.5rem;
+            }
+        }
+        .typed {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing;
+            animation-duration: 1.5s;
+            animation-timing-function: steps(30, end);
+            animation-fill-mode: forwards;
+            transition-timing-function: ease-in-out;
+            }
+        .typed2 {
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0;
+                animation: typing;
+                animation-duration: 1.5s;
+                animation-delay: 2s;
+                animation-timing-function: steps(30, end);
+                animation-fill-mode: forwards;
+                transition-timing-function: ease-in-out;
+                }
+                .typed3 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 0;
+                    animation: typing;
+                    animation-duration: 1.5s;
+                    animation-delay: 3s;
+                    animation-timing-function: steps(30, end);
+                    animation-fill-mode: forwards;
+                    transition-timing-function: ease-in-out;
+                    }
+                .typed3 {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 0;
+                        animation: typing;
+                        animation-duration: 1.5s;
+                        animation-delay: 4s;
+                        animation-timing-function: steps(30, end);
+                        animation-fill-mode: forwards;
+                        transition-timing-function: ease-in-out;
+                }
+                .typed4 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 0;
+                    animation: typing;
+                    animation-duration: 1.5s;
+                    animation-delay: 5.5s;
+                    animation-timing-function: steps(30, end);
+                    animation-fill-mode: forwards;
+                    transition-timing-function: ease-in-out;
+                }
+                .typed5 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 0;
+                    animation: typing;
+                    animation-duration: 1.5s;
+                    animation-delay: 6.5s;
+                    animation-timing-function: steps(30, end);
+                    animation-fill-mode: forwards;
+                    transition-timing-function: ease-in-out;
+                }
+                .typed6 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 0;
+                    animation: typing;
+                    animation-duration: 1.5s;
+                    animation-delay: 7.5s;
+                    animation-timing-function: steps(30, end);
+                    animation-fill-mode: forwards;
+                    transition-timing-function: ease-in-out;
+                    }
+    }
+    .button{
+        text-decoration: none;
+        background: $color-primary;
+        color:$color-text-1 ;
+        border-radius: 40px;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 0.8rem;
+        opacity: 0;
+        animation: fade-in 0.5s ease forwards;
+        animation-delay: 9s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            background-color: $color-secondary;
+        }
+        @include md{
+            font-size: 1.3rem;
+        }
+    }
+
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

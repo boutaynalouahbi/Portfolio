@@ -1,0 +1,77 @@
+@import '../../colors';
+@import '../../mixins';
+.About{
+    height: 600px;
+    background-color: #f060408f;
+    position: relative;
+    color: $color-text-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include md{
+        height: 900px;
+    }
+    .container{
+        max-width:90% ;
+        @include md{
+            max-width:70% ;
+        }
+        @include lg{
+            max-width:60% ;
+        }
+        margin: 50px auto ;
+        text-align: center;
+        h1{
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin: 20px 0;
+            text-transform: uppercase;
+            @include md{
+                font-size: 3rem;
+            }
+            @include b_md_lg {
+                font-size:4rem;
+            }
+
+            }
+            p{
+                font-size: 1rem;
+                letter-spacing: 3px;
+                margin-top: 10px;
+                @include b_md_lg {
+                    font-size: 1.2rem;
+                }
+                @include md{
+                    font-size: 1.3rem;
+                }
+                
+            }
+
+    }
+    .buttuns{
+        display: flex;
+        width: 100%;
+        max-width:60% ;
+       
+        a{
+            text-decoration: none;
+            background: $color-text-1;
+            color:$color-text-2;
+            margin: 20px;
+            width: fit-content;
+            white-space: nowrap;
+            border-radius: 40px;
+            padding: 20px;
+            font-size: 0.8rem;
+            &:hover{
+                background: $color-text-2;
+                color:$color-text-1;
+            }
+            @include md{
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

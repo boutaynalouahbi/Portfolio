@@ -1,0 +1,43 @@
+@import '../../colors';
+@import '../../mixins';
+#Contact{
+    height: 600px;
+    position: relative;
+    background-color: $color-text-1;
+    color: $color-text-2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md{
+        height: 900px;
+    }
+    
+    h1{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin: 20px 0;
+        text-transform: uppercase;
+        @include md{
+            font-size: 3rem;
+        }
+        @include b_md_lg {
+            font-size:4rem;
+        }
+
+        }
+        p{
+            font-size: 1rem;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            @include b_md_lg {
+                font-size: 1.2rem;
+            }
+            @include md{
+                font-size: 1.3rem;
+            }
+            
+        }
+   
+    
+}

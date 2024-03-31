@@ -1,0 +1,59 @@
+.Portfolio {
+  height: 750px;
+  position: relative;
+  color: #000000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .Portfolio {
+    height: 900px;
+  }
+}
+.Portfolio .container {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Portfolio .container h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .Portfolio .container h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .Portfolio .container h1 {
+    font-size: 4rem;
+  }
+}
+.Portfolio .container p {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 991px) {
+  .Portfolio .container p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Portfolio .container p {
+    font-size: 1.3rem;
+  }
+}
+.Portfolio .projets {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 90%;
+}/*# sourceMappingURL=styles.css.map */

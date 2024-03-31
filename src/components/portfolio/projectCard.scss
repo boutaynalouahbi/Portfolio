@@ -1,0 +1,80 @@
+@import '../../colors';
+@import '../../mixins';
+.containerCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color:$color-text-1;
+    background-color: $color-bg;
+    padding: 18px 24px;
+    max-width: 345px ;
+    height: 500px;
+    margin: 0 5px;
+    @include md{
+        max-width: 450px ;
+        height: 600px;
+    }
+    
+    .image {
+        margin-bottom: 26px;
+        width: 100%;
+        height: 200px;
+    }
+    .title {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .description {
+        margin-top: 6px;
+        font-size: 25px;
+        font-weight: 400;
+        height: 150px;
+      }
+      .skills {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        
+        gap: 2px;
+        list-style: none;
+        .skill {
+            font-size: 18px;
+            @include md{
+                font-size: 20px;
+            }
+            font-weight: 400;
+            border-radius: 100px;
+            background: var(--color-dark);
+            padding: 2px 10px;
+          }
+      }
+      
+      
+      .links {
+        width: 100%;
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-around;
+        align-self: self-end;
+        .link {
+            text-decoration: none;
+            color: $color-text-2;
+            font-size: 20px;
+            
+            font-weight: 600;
+            border-radius: 100px;
+            background: $color-text-1;
+            padding: 1px 22px;
+            &:hover{
+                background-color: $color-primary;
+                color: $color-text-1;
+            }
+          }
+      }
+      
+      
+  }

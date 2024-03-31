@@ -45,7 +45,7 @@ console.log("Hauteur du corps de la page : " + bodyHeight + " pixels");
     
     <Navbar/>
     <Routes>
-      
+    <Route path='/' element={<Home/>}/>
       <Route path='/#Home' element={<Home/>}/>
       <Route path='/#About' element={<About/>}/>
       <Route path='/#Portfolio' element={<Portfolio/>}/>

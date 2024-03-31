@@ -74,7 +74,8 @@ export default function Navbar() {
   return (
     <header className={`header ${mobileMenu ? "mobileView" :""} ${Bg}`}>
         <div className="name">
-            <a  href="/">BOUTAYNA LOUAHBI</a>
+            {/* <a  href="/">BOUTAYNA LOUAHBI</a> */}
+            <NavLink to="/">BOUTAYNA LOUAHBI</NavLink>
         </div>
         
         <ul className="menuItems">

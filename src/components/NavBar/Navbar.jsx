@@ -79,9 +79,9 @@ export default function Navbar() {
         </div>
         
         <ul className="menuItems">
-        <li className={`menuItem ${(activeLink === 'Home' ) ? 'active' : ''}`}>
+        <li className={`menuItem ${(activeLink === '/' ) ? 'active' : ''}`}>
                 {/* <a href="#Home" onClick={() => handleLinkClick('Home')}>Accueil</a> */}
-                <NavLink to={"#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
+                <NavLink to={"/"} onClick={() => handleLinkClick('/')}>Accueil</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'About' ) ? 'active' : ''}`}>
                 {/* <a href="#About" onClick={() => handleLinkClick('About')}>Présentation</a> */}

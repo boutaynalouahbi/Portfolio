@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './styles.scss'
-import projets from "../../data/projets.json"
+import projets from "../../data/projets"
 import ProjectCard from './ProjectCard';
 import Slider from 'react-slick';
 

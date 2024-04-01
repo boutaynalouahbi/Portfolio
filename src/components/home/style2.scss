@@ -58,43 +58,30 @@
             white-space: nowrap;
             width: 0;
             animation: typing;
-            animation-duration: 1.5s;
+            animation-duration: 2s;
             animation-timing-function: steps(30, end);
             animation-fill-mode: forwards;
-            transition-timing-function: ease-in-out;
             }
         .typed2 {
                 overflow: hidden;
                 white-space: nowrap;
                 width: 0;
                 animation: typing;
-                animation-duration: 1.5s;
-                animation-delay: 2s;
+                animation-duration: 2s;
+                animation-delay: 3s;
                 animation-timing-function: steps(30, end);
                 animation-fill-mode: forwards;
-                transition-timing-function: ease-in-out;
                 }
-                .typed3 {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    width: 0;
-                    animation: typing;
-                    animation-duration: 1.5s;
-                    animation-delay: 3s;
-                    animation-timing-function: steps(30, end);
-                    animation-fill-mode: forwards;
-                    transition-timing-function: ease-in-out;
-                    }
                 .typed3 {
                         overflow: hidden;
                         white-space: nowrap;
                         width: 0;
                         animation: typing;
                         animation-duration: 1.5s;
-                        animation-delay: 4s;
+                        animation-delay: 5s;
                         animation-timing-function: steps(30, end);
                         animation-fill-mode: forwards;
-                        transition-timing-function: ease-in-out;
+                        
                 }
                 .typed4 {
                     overflow: hidden;
@@ -102,10 +89,10 @@
                     width: 0;
                     animation: typing;
                     animation-duration: 1.5s;
-                    animation-delay: 5.5s;
+                    animation-delay: 6s;
                     animation-timing-function: steps(30, end);
                     animation-fill-mode: forwards;
-                    transition-timing-function: ease-in-out;
+                    
                 }
                 .typed5 {
                     overflow: hidden;
@@ -113,10 +100,10 @@
                     width: 0;
                     animation: typing;
                     animation-duration: 1.5s;
-                    animation-delay: 6.5s;
+                    animation-delay: 7s;
                     animation-timing-function: steps(30, end);
                     animation-fill-mode: forwards;
-                    transition-timing-function: ease-in-out;
+                    
                 }
                 .typed6 {
                     overflow: hidden;
@@ -124,10 +111,10 @@
                     width: 0;
                     animation: typing;
                     animation-duration: 1.5s;
-                    animation-delay: 7.5s;
+                    animation-delay: 8s;
                     animation-timing-function: steps(30, end);
                     animation-fill-mode: forwards;
-                    transition-timing-function: ease-in-out;
+                   
                     }
     }
     .button{
@@ -140,7 +127,7 @@
         font-size: 0.8rem;
         opacity: 0;
         animation: fade-in 0.5s ease forwards;
-        animation-delay: 9s;
+        animation-delay: 10s;
         transition-timing-function: ease-in-out;
         &:hover{
             background-color: $color-secondary;

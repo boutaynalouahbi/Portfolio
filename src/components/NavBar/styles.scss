@@ -30,7 +30,7 @@
         }
     }
   
-    @include b_md_lg {
+    @include xl {
         // background-color: $color-bg;
         background-color: transparent;
         .name {
@@ -52,7 +52,7 @@
    
     .menuItems{
         list-style-type: none;
-        @include b_md_lg {
+        @include xl {
             display: flex;
         }
         display: none;
@@ -81,7 +81,7 @@
     }
     .mobileMenuItems {
         display: block;
-        @include b_md_lg {
+        @include xl {
             display: none;
         }
         svg {

@@ -44,13 +44,13 @@ function App() {
     
     <Navbar/>
     <Routes>
-    <Route path='/' element={<Home/>}/>
+    <Route path='/#Home' element={<Home/>}/>
       <Route path='/#About' element={<About/>}/>
       <Route path='/#Portfolio' element={<Portfolio/>}/>
       <Route path='/#Resume' element={<ResumeTimeLine/>}/>
       <Route path='/#Contact' element={<Contact/>}/>
     </Routes>
-    <Home/>
+     <Home/> 
     <About/>
     <Portfolio/>
     <ResumeTimeLine/>

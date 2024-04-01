@@ -58,8 +58,11 @@ export default function Navbar() {
             const sectionId = section.getAttribute('id');
              console.log( window.scrollY ,sectionTop ,sectionHeight)
             if (sectionTop >=window.scrollY && window.scrollY <(sectionTop+ sectionHeight )) {
-              setActiveLink(sectionId);
-              hist.push(`/#${sectionId}`); 
+            
+                setActiveLink(sectionId)
+                hist.push(`/#${sectionId}`);
+             
+              
               break;
             }
           }
@@ -79,9 +82,9 @@ export default function Navbar() {
         </div>
         
         <ul className="menuItems">
-        <li className={`menuItem ${(activeLink === '/' ) ? 'active' : ''}`}>
+        <li className={`menuItem ${(activeLink === 'Home' ) ? 'active' : ''}`}>
                 {/* <a href="#Home" onClick={() => handleLinkClick('Home')}>Accueil</a> */}
-                <NavLink to={"/"} onClick={() => handleLinkClick('/')}>Accueil</NavLink>
+                <NavLink to={"Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'About' ) ? 'active' : ''}`}>
                 {/* <a href="#About" onClick={() => handleLinkClick('About')}>Présentation</a> */}

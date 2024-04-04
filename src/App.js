@@ -23,9 +23,11 @@ function App() {
         await loadSlim(engine);
       
     }).then(() => {
-      setInit(true);
-      setLoading(false);
-    });
+      setTimeout(() => {
+        setInit(true);
+        setLoading(false);
+      }, 1500); 
+    })
   }, []);
  
 
@@ -48,11 +50,13 @@ function App() {
     
     <Navbar/>
     <Routes>
-    <Route path='/#Home' element={<Home/>}/>
-      <Route path='/#About' element={<About/>}/>
-      <Route path='/#Portfolio' element={<Portfolio/>}/>
-      <Route path='/#Resume' element={<ResumeTimeLine/>}/>
-      <Route path='/#Contact' element={<Contact/>}/>
+    <Route path="/" >
+    <Route path='#Home' element={<Home/>}/>
+      <Route path='#About' element={<About/>}/>
+      <Route path='#Portfolio' element={<Portfolio/>}/>
+      <Route path='#Resume' element={<ResumeTimeLine/>}/>
+      <Route path='#Contact' element={<Contact/>}/>
+      </Route>
     </Routes>
      <Home/> 
     <About/>

@@ -3,6 +3,7 @@ import { SlMenu } from 'react-icons/sl'
 import { VscChromeClose } from 'react-icons/vsc'
 import { createBrowserHistory } from 'history';
 import { HashLink as NavLink } from 'react-router-hash-link';
+import { NavLink as Link } from 'react-router-dom';
 import './styles.scss'
 import { useLocation } from 'react-router';
 export default function Navbar() {
@@ -52,7 +53,7 @@ export default function Navbar() {
           
           for (let i = 0; i < sections.length; i++) {
             const section = sections[i];
-            console.log( "section",section);
+            //console.log( "section",section);
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
@@ -60,7 +61,7 @@ export default function Navbar() {
             if (sectionTop >=window.scrollY && window.scrollY <(sectionTop+ sectionHeight )) {
             
                 setActiveLink(sectionId)
-                hist.push(`/#${sectionId}`);
+                hist.push(`Portfolio#${sectionId}`);
              
               
               break;
@@ -77,30 +78,29 @@ export default function Navbar() {
   return (
     <header className={`header ${mobileMenu ? "mobileView" :""} ${Bg}`}>
         <div className="name">
-            {/* <a  href="/">BOUTAYNA LOUAHBI</a> */}
-            <NavLink to="/#Home">BOUTAYNA LOUAHBI</NavLink>
+            <NavLink to="#Home">BOUTAYNA LOUAHBI</NavLink> 
         </div>
         
         <ul className="menuItems">
         <li className={`menuItem ${(activeLink === 'Home' ) ? 'active' : ''}`}>
                 {/* <a href="#Home" onClick={() => handleLinkClick('Home')}>Accueil</a> */}
-                <NavLink to={"/#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
+                <NavLink to={"#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'About' ) ? 'active' : ''}`}>
                 {/* <a href="#About" onClick={() => handleLinkClick('About')}>Présentation</a> */}
-                <NavLink smooth  to={"/#About"} onClick={() => handleLinkClick('About')} >Présentation</NavLink>
+                <NavLink smooth  to={"#About"} onClick={() => handleLinkClick('About')} >Présentation</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Portfolio' )? 'active' : ''}`}>
                 {/* <a href="#Portfolio" onClick={() => handleLinkClick('Portfolio')}>Portfolio</a> */}
-                <NavLink smooth  to={"/#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</NavLink>
+                <NavLink smooth  to={"#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Resume' ) ? 'active' : ''}`}>
                 {/* <a href="#Formation" onClick={() => handleLinkClick('Formation')}>Formation</a> */}
-                <NavLink smooth  to={"/#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</NavLink>
+                <NavLink smooth  to={"#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Contact' ) ? 'active' : ''}`}>
                 {/* <a href="#Contact" onClick={() => handleLinkClick('Contact')}>Contact</a> */}
-                <NavLink smooth  to={"/#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</NavLink>
+                <NavLink smooth  to={"#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</NavLink>
             </li>
         </ul>
         <div className="mobileMenuItems">

@@ -19,7 +19,7 @@ export default function Home() {
                     <p className='typed6'>et mes réalisations avec vous.</p>
                     
                 </div> 
-                <a href="/#About" class="button">En savoir plus sur moi</a>
+                <a href="#About" class="button">En savoir plus sur moi</a>
                 </section>
   )
 }

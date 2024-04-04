@@ -84,23 +84,23 @@ export default function Navbar() {
         <ul className="menuItems">
         <li className={`menuItem ${(activeLink === 'Home' ) ? 'active' : ''}`}>
                 {/* <a href="#Home" onClick={() => handleLinkClick('Home')}>Accueil</a> */}
-                <NavLink to={"#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
+                <NavLink to={"/#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'About' ) ? 'active' : ''}`}>
                 {/* <a href="#About" onClick={() => handleLinkClick('About')}>Présentation</a> */}
-                <NavLink smooth  to={"#About"} onClick={() => handleLinkClick('About')} >Présentation</NavLink>
+                <NavLink smooth  to={"/#About"} onClick={() => handleLinkClick('About')} >Présentation</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Portfolio' )? 'active' : ''}`}>
                 {/* <a href="#Portfolio" onClick={() => handleLinkClick('Portfolio')}>Portfolio</a> */}
-                <NavLink smooth  to={"#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</NavLink>
+                <NavLink smooth  to={"/#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Resume' ) ? 'active' : ''}`}>
                 {/* <a href="#Formation" onClick={() => handleLinkClick('Formation')}>Formation</a> */}
-                <NavLink smooth  to={"#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</NavLink>
+                <NavLink smooth  to={"/#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</NavLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Contact' ) ? 'active' : ''}`}>
                 {/* <a href="#Contact" onClick={() => handleLinkClick('Contact')}>Contact</a> */}
-                <NavLink smooth  to={"#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</NavLink>
+                <NavLink smooth  to={"/#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</NavLink>
             </li>
         </ul>
         <div className="mobileMenuItems">

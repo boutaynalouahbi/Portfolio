@@ -3,14 +3,10 @@ import Navbar from './components/NavBar/Navbar';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
 import particles from './utils/particles';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Portfolio from './components/portfolio/Portfolio';
 import { Route, Routes } from 'react-router';
-import ResumeTimeLine from './components/cv/ResumeTimeLine';
 import Footer from './components/footer/Footer';
 import { ClipLoader } from 'react-spinners';
+import HomePage from './pages/HomePage';
 
 
 function App() {
@@ -60,13 +56,8 @@ function App() {
     
     <Navbar/>
     <Routes>
-    <Route path="/" />
+    <Route path="/" element={<HomePage/>}/>
     </Routes>
-    <Home/> 
-      <About/>
-      <Portfolio/>
-      <ResumeTimeLine/>
-      <Contact/>
     <Footer/>
     </div>}
   </>

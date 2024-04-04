@@ -28,7 +28,7 @@ export default function About() {
         <div>
         <div className='buttuns' >
             <a  className="cv" onClick={downloadPdf}>Télécharger mon cv</a>
-            <a href="/#Contact" className="contact" >Me contacter</a>
+            <a href="#Contact" className="contact" >Me contacter</a>
         </div>
         </div>
     </section>

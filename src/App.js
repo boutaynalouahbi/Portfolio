@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 import Navbar from './components/NavBar/Navbar';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
-import { loadFull } from "tsparticles";
 import particles from './utils/particles';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -11,17 +10,21 @@ import Portfolio from './components/portfolio/Portfolio';
 import { Route, Routes } from 'react-router';
 import ResumeTimeLine from './components/cv/ResumeTimeLine';
 import Footer from './components/footer/Footer';
+import { ClipLoader } from 'react-spinners';
 
 
 function App() {
   const [init, setInit] = useState(false);
-  useEffect(() => {
+  const [loading ,setLoading]=useState(false)
 
+  useEffect(() => {
+    setLoading(true)
     initParticlesEngine(async (engine) => {
         await loadSlim(engine);
       
     }).then(() => {
       setInit(true);
+      setLoading(false);
     });
   }, []);
  
@@ -36,6 +39,7 @@ function App() {
   
   return (
   <>
+    {loading ? <div style={{width:'100%' ,height:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}> <ClipLoader color="#ff8b52" loading={loading} size={150} /> </div> : <div>
     {init ?  <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
@@ -56,7 +60,7 @@ function App() {
     <ResumeTimeLine/>
     <Contact/>
     <Footer/>
-    
+    </div>}
   </>
   );
 }

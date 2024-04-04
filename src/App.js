@@ -23,10 +23,8 @@ function App() {
         await loadSlim(engine);
       
     }).then(() => {
-      setTimeout(() => {
         setInit(true);
         setLoading(false);
-      }, 1500); 
     })
   }, []);
  
@@ -38,31 +36,37 @@ function App() {
     () => (particles),
     [],
   );
+  const Mparticles= ()=>{
+    if(init){
+      return <Particles
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
+    /> 
+    }else{
+      return ''
+    }
+  }
+//   init && <Particles
+//   id="tsparticles"
+//   particlesLoaded={particlesLoaded}
+//   options={options}
+// /> 
   
   return (
   <>
     {loading ? <div style={{width:'100%' ,height:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}> <ClipLoader color="#ff8b52" loading={loading} size={150} /> </div> : <div>
-    {init ?  <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      /> : ''}
+    {Mparticles() }
     
     <Navbar/>
     <Routes>
-    <Route path="/" >
-    <Route path='#Home' element={<Home/>}/>
-      <Route path='#About' element={<About/>}/>
-      <Route path='#Portfolio' element={<Portfolio/>}/>
-      <Route path='#Resume' element={<ResumeTimeLine/>}/>
-      <Route path='#Contact' element={<Contact/>}/>
-      </Route>
+    <Route path="/" />
     </Routes>
-     <Home/> 
-    <About/>
-    <Portfolio/>
-    <ResumeTimeLine/>
-    <Contact/>
+    <Home/> 
+      <About/>
+      <Portfolio/>
+      <ResumeTimeLine/>
+      <Contact/>
     <Footer/>
     </div>}
   </>

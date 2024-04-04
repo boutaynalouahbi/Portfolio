@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { SlMenu } from 'react-icons/sl'
 import { VscChromeClose } from 'react-icons/vsc'
 import { createBrowserHistory } from 'history';
-import { HashLink as NavLink } from 'react-router-hash-link';
-import { NavLink as Link } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 import './styles.scss'
 import { useLocation } from 'react-router';
 export default function Navbar() {
@@ -14,7 +14,7 @@ export default function Navbar() {
     const location = useLocation();
     const hist=createBrowserHistory()
     const currentPath = location.hash;
-    console.log(currentPath);
+    //console.log(currentPath);
     const handleLinkClick = (link) => {
     setActiveLink(link);
     
@@ -57,7 +57,7 @@ export default function Navbar() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-             console.log( window.scrollY ,sectionTop ,sectionHeight)
+             //console.log( window.scrollY ,sectionTop ,sectionHeight)
             if (sectionTop >=window.scrollY && window.scrollY <(sectionTop+ sectionHeight )) {
             
                 setActiveLink(sectionId)
@@ -73,34 +73,34 @@ export default function Navbar() {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+      }, [hist]);
     
   return (
     <header className={`header ${mobileMenu ? "mobileView" :""} ${Bg}`}>
         <div className="name">
-            <NavLink to="#Home">BOUTAYNA LOUAHBI</NavLink> 
+            <NavLink to="/">BOUTAYNA LOUAHBI</NavLink> 
         </div>
         
         <ul className="menuItems">
         <li className={`menuItem ${(activeLink === 'Home' ) ? 'active' : ''}`}>
                 {/* <a href="#Home" onClick={() => handleLinkClick('Home')}>Accueil</a> */}
-                <NavLink to={"#Home"} onClick={() => handleLinkClick('Home')}>Accueil</NavLink>
+                <HashLink to={"#Home"} onClick={() => handleLinkClick('Home')}>Accueil</HashLink>
             </li>
             <li className={`menuItem ${(activeLink === 'About' ) ? 'active' : ''}`}>
                 {/* <a href="#About" onClick={() => handleLinkClick('About')}>Présentation</a> */}
-                <NavLink smooth  to={"#About"} onClick={() => handleLinkClick('About')} >Présentation</NavLink>
+                <HashLink smooth  to={"#About"} onClick={() => handleLinkClick('About')} >Présentation</HashLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Portfolio' )? 'active' : ''}`}>
                 {/* <a href="#Portfolio" onClick={() => handleLinkClick('Portfolio')}>Portfolio</a> */}
-                <NavLink smooth  to={"#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</NavLink>
+                <HashLink smooth  to={"#Portfolio"} onClick={() => handleLinkClick('Portfolio')}>Portfolio</HashLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Resume' ) ? 'active' : ''}`}>
                 {/* <a href="#Formation" onClick={() => handleLinkClick('Formation')}>Formation</a> */}
-                <NavLink smooth  to={"#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</NavLink>
+                <HashLink smooth  to={"#Resume"} onClick={() => handleLinkClick('Resume')}>Expériences/Formation</HashLink>
             </li>
             <li className={`menuItem ${(activeLink === 'Contact' ) ? 'active' : ''}`}>
                 {/* <a href="#Contact" onClick={() => handleLinkClick('Contact')}>Contact</a> */}
-                <NavLink smooth  to={"#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</NavLink>
+                <HashLink smooth  to={"#Contact"} onClick={() => handleLinkClick('Contact')}>Contact</HashLink>
             </li>
         </ul>
         <div className="mobileMenuItems">

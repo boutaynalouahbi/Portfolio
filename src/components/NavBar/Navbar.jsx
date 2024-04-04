@@ -61,7 +61,7 @@ export default function Navbar() {
             if (sectionTop >=window.scrollY && window.scrollY <(sectionTop+ sectionHeight )) {
             
                 setActiveLink(sectionId)
-                hist.push(`Portfolio#${sectionId}`);
+                hist.push(`#${sectionId}`);
              
               
               break;

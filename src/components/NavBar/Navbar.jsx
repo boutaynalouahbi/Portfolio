@@ -61,8 +61,9 @@ export default function Navbar() {
             if (sectionTop >=window.scrollY && window.scrollY <(sectionTop+ sectionHeight )) {
             
                 setActiveLink(sectionId)
-                hist.push(`#${sectionId}`);
-             
+                const currentPath = hist.location.pathname;
+                const trimmedPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
+                hist.push(`${trimmedPath}#${sectionId}`);
               
               break;
             }
